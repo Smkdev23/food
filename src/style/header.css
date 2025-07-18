@@ -1,0 +1,77 @@
+header{
+    width: 100%; /* Largura 100% da tela*/
+    padding: 28px 8%; /*Espaçamento interno entre o conteído e a margem */ 
+}
+
+#navbar {
+    width: 100%; /*Largura 100% dentro do header*/
+    display: flex;/*Itens lado a lado*/
+    align-items: center; /*Alinhamento de itens centralizado verticalmente*/
+    justify-content: space-between; /*Espaçamento iguais entre os itens  */
+}
+
+#nav_logo {
+    font-size: 24px;
+    color: #e9a209;
+}
+
+#nav_list{
+    display: flex;
+    list-style: none; /*Remoção da bolinha da lista*/
+    gap: 8px; /*Espaçamento entre a lista*/
+}
+
+.nav-item a{
+    text-decoration: none; /*Remoção do sublinhado*/
+    color: #1d1d1dad;
+    font-weight: 600; /*Grossura da fonte*/
+}
+
+.nav-item.active a{
+    color: #1d1d1dad;
+    border-bottom: 3px solid #ffe100; /*O active é uma linha embaixo da palavra*/
+}
+
+#mobile_btn {
+    display: none; /*Elemento é removido(ocultação) do layout da tela*/
+
+}
+
+#mobile_menu{
+    display: none;
+}
+
+/*max-width: Significa decrescente*/
+@media screen and (max-width: 600px) {
+    #nav_list, #navbar .btn-default {
+        display: none;
+    }
+
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+
+    }
+
+    #mobile_menu.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item{
+        list-style: none;
+        text-align: center;
+    }
+}

@@ -1,0 +1,4 @@
+#home{
+    display: flex;
+    min-height: calc(100vh - 91px); /*Altura min do entre o header e o home: 100vh é o tamanho total do espaço tirando o valor da header(nav_bar) */
+}

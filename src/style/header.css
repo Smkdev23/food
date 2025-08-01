@@ -1,6 +1,10 @@
 header{
     width: 100%; /* Largura 100% da tela*/
     padding: 28px 8%; /*Espaçamento interno entre o conteído e a margem */ 
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary-1);
+    z-index: 3;
 }
 
 #navbar {
@@ -12,13 +16,13 @@ header{
 
 #nav_logo {
     font-size: 24px;
-    color: #e9a209;
+    color: var(--color-primary-6);
 }
 
 #nav_list{
     display: flex;
     list-style: none; /*Remoção da bolinha da lista*/
-    gap: 8px; /*Espaçamento entre a lista*/
+    gap: 48px; /*Espaçamento entre a lista*/
 }
 
 .nav-item a{
@@ -30,6 +34,7 @@ header{
 .nav-item.active a{
     color: #1d1d1dad;
     border-bottom: 3px solid #ffe100; /*O active é uma linha embaixo da palavra*/
+    border-bottom: 3px solid var(--color-primary-4);
 }
 
 #mobile_btn {
